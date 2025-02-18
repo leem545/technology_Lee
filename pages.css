@@ -1,0 +1,172 @@
+body {
+    min-width: 100vh;
+    min-height: 100vh; 
+    background-color: #fff;
+    justify-content: center;
+    align-items: center !important
+}
+
+.container {
+    width: 75%;
+    max-width: 1440px !important; 
+    margin: 0 auto !important;   
+    padding: 40px 20px !important;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+blockquote {
+    font-size: 128px;
+    font-weight: 400;
+    color: #000;
+    text-indent: -44px; 
+    text-align: left;
+}
+
+/* blockquotes*/
+
+.page1 blockquote {
+    font-family: Agdasima;
+    text-indent: -40px;
+}
+.page2 blockquote {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-indent: -65px;
+    line-height: 125%;
+}
+.page3 blockquote {
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 600;
+    text-indent: -48px;
+    line-height: 153%;
+}
+.page4 blockquote {
+    font-family: "DotGothic16", serif;
+    text-indent: -65px;
+    line-height: 135%;
+}
+.page5 blockquote {
+    font-family: "Jersey 25";
+    line-height: 125%; 
+
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 150%; 
+    letter-spacing: 0.96px;
+    padding-left: 350px;
+    text-align: left;
+    margin-top: 15px;     
+    margin-bottom: 15px; 
+}
+
+p:last-child {
+    margin-bottom: 100px; 
+}
+
+/* navigation- home,about*/
+.main-nav {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-family: 'Courier New', monospace;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.main-nav li a:hover {
+    color: gray;
+}
+
+/* Back */
+.back-nav {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    display: flex;
+    list-style: none;
+    font-family: 'Courier New', monospace;
+}
+
+.back-nav li a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.back-nav li a:hover {
+    color: gray;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) 
+{
+    .container {
+        width: 90%;
+        max-width: 400px;
+        padding: 100px;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    blockquote {
+        font-size: 40px;
+        margin-bottom: 50px;
+        margin-left: -5px;
+        font-weight: 400;
+        color: #000;
+        line-height: normal;
+       
+        text-align: left;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: left;
+    }
+}
+
+/* navigation between pages*/
+.pagination {
+    width: 100%;
+    text-align: center;
+}
+
+
+.nav-item img {
+    width: 70px;
+    padding-bottom: 30px;
+    opacity: 0.3; 
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.nav-item:hover img {
+    opacity: 0.7; 
+}
+
+.nav-item img.active-icon {
+    opacity: 1; 
+}

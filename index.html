@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Question Concerning Technology</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="title-container">
+        <a id="title" href="main.html">The Question Concerning Technology</a>
+        <p class="subtitle">by Martin Heidegger</p>
+    
+
+    <script>
+        const title = document.getElementById("title");
+
+        title.addEventListener("mouseenter", function() {
+            document.body.style.opacity = 0; // 페이드 아웃 효과
+            setTimeout(() => {
+                window.location.href = "main.html"; // 페이지 이동
+            }, 500); // 0.5초 후 이동
+        });
+
+        document.body.style.opacity = 0;
+        window.onload = () => {
+            document.body.style.transition = "opacity 0.5s";
+            document.body.style.opacity = 1; // 페이드 인 효과
+        };
+    </script>  
+</body>
+</html>
