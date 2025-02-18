@@ -3,7 +3,8 @@ body {
     min-height: 100vh; 
     background-color: #fff;
     justify-content: center;
-    align-items: center !important
+    align-items: center; 
+    overflow-x: hidden;
 }
 
 .container {
@@ -19,7 +20,7 @@ body {
 }
 
 blockquote {
-    font-size: 128px;
+    font-size: 100px;
     font-weight: 400;
     color: #000;
     text-indent: -44px; 
@@ -30,12 +31,12 @@ blockquote {
 
 .page1 blockquote {
     font-family: Agdasima;
-    text-indent: -40px;
+    text-indent: -31px;
 }
 .page2 blockquote {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    text-indent: -65px;
+    text-indent: -50px;
     line-height: 125%;
 }
 .page3 blockquote {
@@ -46,7 +47,7 @@ blockquote {
 }
 .page4 blockquote {
     font-family: "DotGothic16", serif;
-    text-indent: -65px;
+    text-indent: -50px;
     line-height: 135%;
 }
 .page5 blockquote {
@@ -58,7 +59,7 @@ blockquote {
 p {
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 150%; 
     letter-spacing: 0.96px;
@@ -85,7 +86,7 @@ p:last-child {
 
 .main-nav li a {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 13px;
     font-weight: 400;
     color: #000;
     transition: color 0.3s ease;
@@ -107,7 +108,7 @@ p:last-child {
 
 .back-nav li a {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 13px;
     font-weight: 400;
     color: #000;
     transition: color 0.3s ease;
@@ -115,37 +116,6 @@ p:last-child {
 
 .back-nav li a:hover {
     color: gray;
-}
-
-/* mobile */
-@media screen and (max-width: 768px) 
-{
-    .container {
-        width: 90%;
-        max-width: 400px;
-        padding: 100px;
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    blockquote {
-        font-size: 40px;
-        margin-bottom: 50px;
-        margin-left: -5px;
-        font-weight: 400;
-        color: #000;
-        line-height: normal;
-       
-        text-align: left;
-    }
-
-    p {
-        margin: 0;
-        padding: 0;
-        font-size: 16px;
-        line-height: 1.5;
-        text-align: left;
-    }
 }
 
 /* navigation between pages*/
@@ -169,4 +139,44 @@ p:last-child {
 
 .nav-item img.active-icon {
     opacity: 1; 
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 500px !important;
+        padding-top: 100px !important;
+        margin: 0 auto;
+    }
+    blockquote {
+        font-size: 32px;
+        line-height: 140%;
+        max-width: 100%;
+        text-align: center;
+        text-indent: 0 !important; /* 모바일에서는 text-indent 제거 */
+        padding: 0 10px;
+    }
+    
+    p {
+        font-size: 14px;
+        max-width: 100%;
+        padding: 0 10px;
+        text-align: left;
+        line-height: 160%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .nav-item img {
+        width: 40px;
+    }
+
+    .main-nav, .back-nav {
+        position: fixed;
+        top: 10px;
+        right: 40px;
+        gap: 20px;
+        font-size: 10px !important;
+    }
 }
