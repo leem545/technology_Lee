@@ -30,7 +30,7 @@ body {
 
 
 /* mobile */
-@media (max-width: 430px) {
+@media (max-width: 730px) {
     .title-container {
         text-align: center;
     }
